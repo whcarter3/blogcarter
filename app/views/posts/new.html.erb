@@ -1,3 +1,8 @@
 <h1>Submit a post</h1>
+<ul>
+  <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul> 
 
 <%= render 'form' %>
