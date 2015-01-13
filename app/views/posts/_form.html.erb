@@ -1,11 +1,15 @@
 <%= form_for @post do |f| %>
 <div>
-	<ul>
-		<li><%= f.label :title %></li>
-		<li><%= f.text_field :title %></li>
-		<li><%= f.label :body %></li>
-		<li><%= f.text_area :body %></li>
-		<li><%= f.submit %></li>
-	</ul>
+	<div>
+		<%= f.label "Title:" %>
+		<%= f.text_field :title %>
+	</div><br>
+	<div>
+		<%= f.label "Body:" %>
+		<%= f.text_area :body %>
+	</div><br>
+	<div>
+		<%= f.submit %>
+	</div>
 </div>
 <% end %>

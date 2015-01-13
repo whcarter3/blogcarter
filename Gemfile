@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'mongoid', '~> 4.0.0'
 
+gem 'bcrypt-ruby', '~> 3.1.5', :require => "bcrypt"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
