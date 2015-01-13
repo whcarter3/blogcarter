@@ -16,6 +16,10 @@ gem 'mongoid', '~> 4.0.0'
 
 gem 'bcrypt-ruby', '~> 3.1.5', :require => "bcrypt"
 
+gem 'bootstrap-sass', '~> 3.3.1'
+
+gem 'autoprefixer-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
