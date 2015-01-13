@@ -1,4 +1,9 @@
 <h1>Sign Up</h1>
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul> 
 <%= form_for @user do |f| -%>
   <div>
   	<%= f.label :name, "Name:" %>
@@ -13,6 +18,10 @@
   	<%= f.password_field :password %>
   </div>
   <div>
+  <div>
+    <%= f.label :password_confirmation, "Confirm Password:" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
   	<%= f.submit 'Sign Up' %>
   </div>
 <% end %>

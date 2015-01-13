@@ -5,6 +5,12 @@ class User
   field :email, type: String
   field :password_digest, type: String
 
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: {case_sensitive: false}, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
+  validates :password, presence: true, confirmation: true, length: { in: 6..20 }
+
+  attr_reader :password
+
   def password=(unencrypted_password)
   	self.password_digest = BCrypt::Password.create(unencrypted_password)
   end
