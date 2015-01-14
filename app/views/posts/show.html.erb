@@ -1,7 +1,10 @@
 <div>
 	<h1><%= @post.title %></h1>
+	<%= render 'created_at' %>
 	<p><%= @post.body %></p>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-	<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'This cannot be undone.'} %>
+	<% if current_user %>
+		<%= link_to 'Edit', edit_post_path(@post) %>
+		<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'This cannot be undone.'} %>
+	<% end %>
 	<%= link_to 'All Posts', posts_path %>
 </div>

@@ -2,9 +2,14 @@
 
 <% @posts.each do |post| %>
 	<p><%= link_to post.title, post %></p>
-	<p>Posted: <%= post.created_at.strftime("%b. %-d, %Y at %-l:%M %P") %></p>
+	<p><strong>Created at: </strong><%= post.created_at.localtime.strftime("%b. %-d, %Y - %-l:%M %P") %></p>
 <% end %>
 
 <%= link_to 'Compose a new post', new_post_path %>
-<%= link_to 'Admin Login', login_path %>
-<%= link_to 'Log Out', logout_path, method: :delete %>
+<% if !current_user %>
+	<%= link_to 'Admin Login', login_path %>
+<% end %>
+<% if current_user %>
+	<%= link_to 'Log Out', logout_path, method: :delete %>
+<% end %>
+
