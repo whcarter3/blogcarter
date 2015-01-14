@@ -16,3 +16,54 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('http://fonts.googleapis.com/css?family=Merriweather+Sans');
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+h1 {
+	font-size: 4em;
+	border-bottom: 1px solid gray;
+	padding: 6px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Merriweather Sans', sans-serif;
+	color: linen;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background-image: url(background.jpg);
+	background-size: cover;
+}
+
+.body-text {
+	color: honeydew;
+	font-size: 1.25em;
+}
+
+p {
+	font-size: 1.7em;
+	color: darkseagreen;
+}
+
+.form {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.container {
+	background-color: rgba(128, 128, 128, 0.6);
+	border-radius: 15px;
+	margin-top: 15px;
+}
+
+a {
+	color: azure;
+	&:hover {
+		color: azure;
+	}
+}
+
+.created {
+	font-size: 1em;
+}

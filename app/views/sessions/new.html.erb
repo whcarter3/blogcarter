@@ -1,17 +1,23 @@
 <h1>Login</h1>
 <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type%>"><%= message %></div>
+    <div class="alert alert-<%= message_type%>">
+      <%= message %>
+    </div>
 <% end %>
 <%= form_for :login do |f| %>
-  <div>
-  	<%= f.label :email %>
-  	<%= f.text_field :email %>
-  </div>
-  <div>
-  	<%= f.label :password %>
-  	<%= f.password_field :password %>
-  </div>
-  <div>
-  	<%= f.submit "Log in" %>
+  <div class="form-group">
+    <div class="form-group">
+      <%= f.label :email, class: "control-label" %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, class: "control-label" %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.submit "Log in", :class => 'btn btn-success' %>
+    </div>
   </div>
 <% end %>
+
+<%= link_to "All Posts", posts_path %>
