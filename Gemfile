@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'mongoid', '~> 4.0.0'
 
-gem 'bcrypt-ruby', '~> 3.1.5', :require => "bcrypt"
+gem 'bcrypt', '~> 3.1.5', :require => "bcrypt"
 
 gem 'bootstrap-sass', '~> 3.3.1'
 
