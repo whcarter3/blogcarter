@@ -2,17 +2,22 @@
 
 <% @posts.each do |post| %>
 	<div class="container-fluid">
-		<p><%= link_to post.title, post %></p>
-		<p class="created"><strong>Created at: </strong><%= post.created_at.localtime.strftime("%b. %-d, %Y - %-l:%M %P") %></p>
+		<div class="post">
+			<p><%= link_to post.title, post %></p>
+			<p class="created"><strong>Created at: </strong><%= post.created_at.localtime.strftime("%b. %-d, %Y - %-l:%M %P") %></p>
+		</div>
 	</div>
 <% end %>
 
 
-<% if !current_user %>
-	<%= link_to 'Admin Login', login_path %>
-<% end %>
-<% if current_user %>
-	<%= link_to 'Compose a new post', new_post_path %>
-	<%= link_to 'Log Out', logout_path, method: :delete %>
-<% end %>
+
+<div class="bottom">
+	<% if !current_user %>
+		<%= link_to 'Admin Login', login_path %>
+	<% end %>
+	<% if current_user %>
+		<%= link_to 'Compose a new post', new_post_path %></li>
+		<%= link_to 'Log Out', logout_path, method: :delete %></li>
+	<% end %>
+</div>
 
